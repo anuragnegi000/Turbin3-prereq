@@ -26,26 +26,25 @@ const mintCollection = new PublicKey("5ebsp5RChCGK7ssRZMVMufgVZhd2kFbNaotcZ5Uvyt
 const mintTs = Keypair.generate();
 
 
-// (async () => {
-// try {
-// const txhash = await program.methods
-// .initialize("github_username")
-// .accountsPartial({
-// user: keypair.publicKey,
-// account: account_key,
-// system_program: SYSTEM_PROGRAM_ID,
-// })
-// .signers([keypair])
-// .rpc();
-// console.log(`Success! Check out your TX here:
-// https://explorer.solana.com/tx/${txhash}?cluster=devnet`);
-// } catch (e) {
-// console.error(`Oops, something went wrong: ${e}`);
-// }
-// })();
+(async () => {
+try {
+const txhash = await program.methods
+.initialize("anuragnegi000")
+.accountsPartial({
+user: keypair.publicKey,
+account: account_key,
+system_program: SYSTEM_PROGRAM_ID,
+})
+.signers([keypair])
+.rpc();
+console.log(`Success! Check out your TX here:
+https://explorer.solana.com/tx/${txhash}?cluster=devnet`);
+} catch (e) {
+console.error(`Oops, something went wrong: ${e}`);
+}
+})();
 
 // Execute the submitTs transaction
-
 (async () => {
 try {
 const txhash = await program.methods.submitTs()
